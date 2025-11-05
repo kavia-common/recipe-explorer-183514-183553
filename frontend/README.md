@@ -27,6 +27,15 @@ Launches the test runner in interactive watch mode.
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
+## Dependency updates
+
+- React and React DOM updated to 18.3.x (latest 18 minor/patch).
+- ESLint config uses flat config via `eslint.config.mjs` with `@eslint/js` and `eslint-plugin-react`.
+- react-scripts remains on 5.x for CRA compatibility.
+
+If you see Browserslist warnings during build, you can optionally refresh caniuse data:
+- `npx update-browserslist-db@latest`
+
 ## Customization
 
 ### Colors

@@ -93,7 +93,21 @@ function SignIn() {
         </button>
 
         <div id="node-12-91" className="group" style={{ position: 'absolute', left: '40px', top: '701px', width: '97px', height: '17px' }}>
-          <a id="node-12-94" className="link-forgot text-typo-62" href="#" style={{ position: 'absolute', left: '0px', top: '0px', width: '97px', height: '17px' }}>Forgot Password?</a>
+          <a
+            id="node-12-94"
+            className="link-forgot text-typo-62"
+            href="/forgot-password"
+            onClick={(e) => {
+              e.preventDefault();
+              // eslint-disable-next-line no-console
+              console.log('Forgot Password clicked');
+            }}
+            role="button"
+            aria-label="Forgot Password"
+            style={{ position: 'absolute', left: '0px', top: '0px', width: '97px', height: '17px' }}
+          >
+            Forgot Password?
+          </a>
         </div>
 
         <p id="node-13-67" className="text text-typo-63" style={{ position: 'absolute', left: '99px', top: '759px', width: '177px', height: '17px' }}>Don’t have an account? Sign up</p>

@@ -15,7 +15,6 @@ function SignIn() {
 
     function onCtaClick(e) {
       e.preventDefault();
-      // Keep console log to avoid layout changes
       // eslint-disable-next-line no-console
       console.log('Sign In button clicked');
     }
@@ -48,7 +47,7 @@ function SignIn() {
 
   // Render exact DOM extracted from HTML while adjusting asset paths to /assets/figmaimages
   return (
-    <div id="screen-sign-in-11-235" className="screen-container">
+    <div id="screen-sign-in-11-235" className="screen-container" aria-label="Sign In Screen">
       <div id="node-11-235" className="root-frame" style={{ left: '0px', top: '0px', width: '375px', height: '812px' }}>
         <div id="node-13-110" className="group" style={{ position: 'absolute', left: '30px', top: '94px', width: '155px', height: '75px' }}>
           <p id="node-12-29" className="text text-typo-60" style={{ position: 'absolute', left: '0px', top: '0px', width: '84px', height: '45px' }}>Hello,</p>

@@ -20,6 +20,14 @@ function App() {
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
 
+  // Temporary default redirect to /sign-in if user lands on '/'
+  useEffect(() => {
+    if (window.location.pathname === '/') {
+      window.history.replaceState({}, '', '/sign-in');
+      setPath('/sign-in');
+    }
+  }, []);
+
   // PUBLIC_INTERFACE
   const toggleTheme = () => {
     setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
@@ -30,6 +38,7 @@ function App() {
     return <SignIn />;
   }
 
+  // Fallback "home" with a simple link to /sign-in
   return (
     <div className="App">
       <header className="App-header">
@@ -42,9 +51,6 @@ function App() {
         </button>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
           Current theme: <strong>{theme}</strong>
         </p>
         <a
@@ -53,7 +59,6 @@ function App() {
           onClick={(e) => {
             e.preventDefault();
             window.history.pushState({}, '', '/sign-in');
-            // trigger state update
             setPath('/sign-in');
           }}
         >
